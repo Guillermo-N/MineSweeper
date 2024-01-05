@@ -41,6 +41,7 @@ public class Main {
             public void actionPerformed(ActionEvent arg0) {
                 card.next(cardPane);
                 cardPane.remove(mineSweeper);
+                frame.setTitle("Minesweeper");
             }
             
         };
@@ -55,6 +56,7 @@ public class Main {
                 mineSweeper.setExitActionListener(exitGame);
                 cardPane.add(mineSweeper, "Minesweeper");
                 card.next(cardPane);
+                frame.setTitle(String.format("Minesweeper (%dx%d)", size, size));
                 frame.pack();
                 centerFrameOnScreen(frame);
 
